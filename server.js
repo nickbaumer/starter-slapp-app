@@ -118,15 +118,19 @@ slapp.
   message('\\b(lan)\\b', 'ambient', (msg) => {
     var today = new Date();
     var lan = new Date('April 13, 2017 18:00');
-    var difference = (lan - today.getTime());
+    var difference = (lan - today.getTime()) / 1000;
     msg
       .say([
       'LAN starts at 18:00 on Thursday the 13th of April 2017.',
       'la la la la I\'m not listening',
       '6pm. Thursday. 13/04.',
-      'Ask @vyper'
+      'Ask @vyper',
+      difference + ' seconds to go.',
+      difference / 60 + ' minutes to go.',
+      difference / 60 / 60 + ' hours to go.',
+      difference / 86400 + ' days to go.'
       ])
-      .say('diff:' + difference)
+
 
   })
 

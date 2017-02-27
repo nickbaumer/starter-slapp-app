@@ -114,14 +114,17 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 })
 
 // LAN message
-slapp.message('\\b(lan)\\b', 'ambient', (msg) => {
-  msg.say('LAN is coming soon.')
-})
+slapp.
+  message('\\b(lan)\\b', 'ambient', (msg) => {
+    var today = Date.now();
+    var lan = Date.parse('13/04/2017 18:00');
+    var difference = lan - today;
+    msg
+      .say('LAN starts at 18:00 on Thursday the 13th of April 2017.')
+      .say('test var:' + difference)
 
-// test message
-slapp.message('bazinga', 'ambient', (msg) => {
-  msg.say('that\'s what she said')
-})
+  })
+
 
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())

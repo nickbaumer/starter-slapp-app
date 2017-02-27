@@ -118,7 +118,7 @@ slapp.
   message('\\b(lan)\\b', 'ambient', (msg) => {
     var today = new Date();
     var lan = new Date('13/04/2017 18:00');
-    var difference = (lan.getTime() - today.getTime());
+    var difference = (lan - today.getTime());
     msg
       .say([
       'LAN starts at 18:00 on Thursday the 13th of April 2017.',
@@ -126,7 +126,7 @@ slapp.
       '6pm. Thursday. 13/04.',
       'Ask @vyper'
       ])
-      .say('diff:' + lan.getTime())
+      .say('diff:' + difference)
 
   })
 

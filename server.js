@@ -114,7 +114,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 })
 
 // LAN message
-slapp.message('*lan*', (msg) => {
+slapp.message('\slan\s/i', (msg) => {
   msg.say('LAN is coming soon.')
 })
 

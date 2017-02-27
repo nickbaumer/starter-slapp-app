@@ -118,7 +118,7 @@ slapp.
   message('\\b(lan)\\b', 'ambient', (msg) => {
     var today = Date.now();
     var lan = Date.parse('13/04/2017 18:00');
-    var difference = lan - today;
+    var difference = new Date(lan - today);
     msg
       .say('LAN starts at 18:00 on Thursday the 13th of April 2017.')
       .say('test var:' + difference)

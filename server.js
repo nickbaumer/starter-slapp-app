@@ -116,12 +116,17 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 // LAN message
 slapp.
   message('\\b(lan)\\b', 'ambient', (msg) => {
-    var today = Date.now();
-    var lan = Date.parse('13/04/2017 18:00');
+    var today = Date.now().getTime();
+    var lan = Date.parse('13/04/2017 18:00').getTime();
     var difference = new Date(lan - today);
     msg
-      .say('LAN starts at 18:00 on Thursday the 13th of April 2017.')
-      .say('test var:' + difference)
+      .say([
+      'LAN starts at 18:00 on Thursday the 13th of April 2017.',
+      'la la la la I\'m not listening',
+      '6pm. Thursday. 13/04.',
+      'Ask @vyper'
+      ])
+      .say('diff:' + difference)
 
   })
 

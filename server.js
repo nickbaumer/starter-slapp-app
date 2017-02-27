@@ -116,9 +116,9 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 // LAN message
 slapp.
   message('\\b(lan)\\b', 'ambient', (msg) => {
-    var today = Date.now();
+    var today = new Date();
     var lan = new Date('13/04/2017 18:00');
-    var difference = (lan.getTime() - today);
+    var difference = (lan.getTime() - today.getTime());
     msg
       .say([
       'LAN starts at 18:00 on Thursday the 13th of April 2017.',

@@ -126,7 +126,7 @@ slapp.
       '6pm. Thursday. 13/04.',
       'Ask @vyper'
       ])
-      .say('diff:' + difference)
+      .say('diff:' + today.getTime())
 
   })
 

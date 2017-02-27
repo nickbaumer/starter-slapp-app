@@ -118,6 +118,11 @@ slapp.message('/\slan\s/ig', 'ambient', (msg) => {
   msg.say('LAN is coming soon.')
 })
 
+// test message
+slapp.message('bazinga', 'ambient', (msg) => {
+  msg.say('that\'s what she said')
+})
+
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())
 

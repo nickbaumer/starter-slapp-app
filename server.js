@@ -126,9 +126,9 @@ slapp.
       '6pm. Thursday. 13/04.',
       'Ask @vyper',
       difference + ' seconds to go.',
-      difference / 60 + ' minutes to go.',
-      difference / 60 / 60 + ' hours to go.',
-      difference / 86400 + ' days to go.'
+      Math.round(difference / 60) + ' minutes to go.',
+      Math.round(difference / 60 / 60) + ' hours to go.',
+      Math.round(difference / 86400) + ' days to go.'
       ])
 
 

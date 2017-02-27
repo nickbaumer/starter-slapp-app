@@ -116,7 +116,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 // LAN message
 slapp.message('*lan*', (msg) => {
   msg.say('LAN is coming soon.')
-}
+})
 
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())

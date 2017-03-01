@@ -129,11 +129,17 @@ slapp.
       Math.round(difference / 60) + ' minutes to go.',
       Math.round(difference / 60 / 60) + ' hours to go.',
       Math.round(difference / 86400) + ' days to go.'
-    ])
-
-
-
-  })
+    ]).route('thanks', state)
+  }).route('thanks', (msg, state) => {
+    var text = (msg.body.event && msg.body.event.text) || ''
+    if (text.includes("thanks")) {
+      return msg
+        .say([
+          'Douchebag.',
+          'Dickhole.',
+          'Tool.'
+        ])
+  }
 
 
 // attach Slapp to express server

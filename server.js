@@ -115,7 +115,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 
 // LAN message
 slapp.
-  message('(\\b(lan)\\b)|(\\b(Ian(\\b))', 'ambient', (msg) => {
+  message('(\\b(lan)\\b)|(\\b(Ian(\\b)', 'ambient', (msg) => {
     var today = new Date();
     var lan = new Date('April 13, 2017 18:00');
     var difference = (lan - today.getTime()) / 1000;

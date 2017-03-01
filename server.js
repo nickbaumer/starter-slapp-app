@@ -132,7 +132,7 @@ slapp.
     ]).route('thanks')
   }).route('thanks', (msg) => {
     var text = (msg.body.event && msg.body.event.text) || ''
-    if (text.includes("thanks")) {
+    if (text.match(/(thanks|cheers|ta|thx|thank you|/i))) {
       return msg
         .say([
           'Douchebag.',

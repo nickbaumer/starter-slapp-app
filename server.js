@@ -140,6 +140,7 @@ slapp.
           'Tool.'
         ])
   }
+})
 
 
 // attach Slapp to express server

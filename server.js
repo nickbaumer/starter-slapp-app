@@ -15,7 +15,7 @@ var slapp = Slapp({
   context: Context()
 })
 
-require ('.app/models/tutorial')(app);
+require ('.app/models/tutorial')(slapp);
 
 // LAN message
 slapp.

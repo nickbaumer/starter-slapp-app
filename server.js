@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const Slapp = require('slapp', '../app/models/tutorial')
+const Slapp = require('slapp')
 const ConvoStore = require('slapp-convo-beepboop')
 const Context = require('slapp-context-beepboop')
 
@@ -14,6 +14,8 @@ var slapp = Slapp({
   convo_store: ConvoStore(),
   context: Context(),
 })
+
+require('../app/models/tutorial')(slapp);
 
 // LAN message
 slapp.

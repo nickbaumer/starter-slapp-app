@@ -9,8 +9,8 @@ module.exports = function(slapp) {
   })
 
   slapp.message('add quote', ['direct_message'], (msg) => {
-    var attach = msg.body.event.attachments.author_name
-    console.log(attach)
+    var type = msg.body.event.type
+    console.log('type:' + type)
     })
 
 }

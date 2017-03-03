@@ -1,5 +1,6 @@
 module.exports = function(slapp) {
   slapp.message('', ['direct_message'], (msg, attachments) => {
+    console.log('You trigged a catch all.')
     msg.say(attachments.text)
   })
 

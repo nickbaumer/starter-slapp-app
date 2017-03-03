@@ -1,8 +1,7 @@
 'use strict'
 
 const express = require('express')
-const Slapp = require('slapp')
-const Slapp = require('../app/models/tutorial')
+const Slapp = require('slapp', '../app/models/tutorial')
 const ConvoStore = require('slapp-convo-beepboop')
 const Context = require('slapp-context-beepboop')
 

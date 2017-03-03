@@ -1,6 +1,6 @@
 // tutorial.js
 // the original code from the starter slapp app
-module.exports = function(slapp) {
+module.exports = {
   var HELP_TEXT = `
   I will respond to the following messages:
   \`help\` - to see this message.

@@ -1,8 +1,4 @@
 module.exports = function(slapp) {
-  slapp.message('', ['direct_message'], (msg, attachments) => {
-    console.log('You trigged a catch all.')
-    msg.say(attachments.text)
-  })
 
   slapp.message('ping', ['direct_message'], (msg, text) => {
     msg.say(text)
@@ -11,4 +7,10 @@ module.exports = function(slapp) {
   slapp.message('pong', ['direct_message'], (msg) => {
     msg.say('ping')
   })
+
+  slapp.message('add quote', ['direct_message'], (msg, attachments) => {
+    msg.say(attachments.author_name)
+    msg.say(attachments.text)
+    })
+
 }

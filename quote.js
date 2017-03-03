@@ -8,8 +8,9 @@ module.exports = function(slapp) {
     msg.say('ping')
   })
 
-  slapp.message('add quote', ['direct_message'], (msg, attachments) => {
-    console.log(attachments)    
+  slapp.message('add quote', ['direct_message'], (msg) => {
+    var attach = msg.body.event.attachments.author_name
+    console.log(attach)
     })
 
 }

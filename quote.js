@@ -1,5 +1,5 @@
 module.exports = function(slapp) {
-  slapp.message('1 attachments', ['direct_message'], (msg, attachments) => {
+  slapp.message('', ['direct_message'], (msg, attachments) => {
     msg.say(attachments.text)
   })
 

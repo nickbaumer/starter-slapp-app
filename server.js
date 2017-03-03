@@ -2,6 +2,7 @@
 
 const express = require('express')
 const Slapp = require('slapp')
+const Slapp = require('../app/models/tutorial')
 const ConvoStore = require('slapp-convo-beepboop')
 const Context = require('slapp-context-beepboop')
 
@@ -13,10 +14,7 @@ var slapp = Slapp({
   verify_token: process.env.SLACK_VERIFY_TOKEN,
   convo_store: ConvoStore(),
   context: Context(),
-  require ('../app/models/tutorial')
 })
-
-//require ('../app/models/tutorial');
 
 // LAN message
 slapp.

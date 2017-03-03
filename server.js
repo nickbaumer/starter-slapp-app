@@ -15,7 +15,7 @@ var slapp = Slapp({
   context: Context(),
 })
 
-require('./tutorial')(slapp);
+//require('./tutorial')(slapp);
 require('./lan')(slapp);
 require('./quote')(slapp);
 

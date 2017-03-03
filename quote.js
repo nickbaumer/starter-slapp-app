@@ -9,7 +9,7 @@ module.exports = function(slapp) {
   })
 
   slapp.message('add quote', ['direct_message'], (msg) => {
-    var type = msg.body.event.type
+    var type = msg.body.event.attachments.text
     console.log('type:' + type)
     })
 

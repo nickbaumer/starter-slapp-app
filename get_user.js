@@ -1,4 +1,4 @@
-module.exports = function(msg, callback) {
+module.exports = function(msg) {
 
 var request = require('request')
 var user_name = ''

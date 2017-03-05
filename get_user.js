@@ -20,10 +20,10 @@ var options = {
 request(options, function (error, response, body) {
     //if (!error && response.statusCode == 200) {
         // Print out the response body
-        var result = JSON.parse(body)
-        user_name = result.user.name
+        var result = JSON.parse(body);
+        user_name = result.user.name;
     //}
-})
+});
 
 return user_name;
 

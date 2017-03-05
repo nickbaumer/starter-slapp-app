@@ -28,9 +28,11 @@ module.exports = function(slapp) {
       .say('Are there more lines?')
       .route('more-lines', state)
     } else if (text == 'yes') {
+      return msg
       .say('Please share the next line.')
       .route('more-lines', state)
     } else if (text == 'no') {
+      return msg
       .say('Here is your quote')
       .say(state.quote)
     }

@@ -15,7 +15,6 @@ module.exports = function(slapp) {
         state.nick = user_name
       }
       state.quote = attachments.author_subname + ': ' + attachments.text + '/n'
-      console.log('state.quote:' + state.quote)
       return msg
       .say(firstQuote + 'Are there more lines?')
       .route('more-lines', state)
@@ -35,7 +34,7 @@ module.exports = function(slapp) {
     } else if (text == 'no') {
       return msg
       .say('Here is your quote')
-      .say(state.quote)
+      .say(JSON.stringify(state))
     }
   })
 }

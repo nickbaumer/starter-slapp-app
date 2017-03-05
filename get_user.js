@@ -17,7 +17,11 @@ var options = {
 }
 
 // Start the request
- request(options, function (error, response, body) {
+callback = function(response) {
+  user_name = response;
+}
+
+ request(options, function (error, response, body), callback {
     //if (!error && response.statusCode == 200) {
         // Print out the response body
         var result = JSON.parse(body);
@@ -26,6 +30,6 @@ var options = {
     //}
 });
 
-
+return user_name;
 
 };

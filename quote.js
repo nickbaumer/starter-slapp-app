@@ -8,7 +8,6 @@ module.exports = function(slapp) {
       console.log('text:' + attachments.text)
       console.log('author_subname:' + attachments.author_subname)
       console.log('ts:' + attachments.ts)
-      console.log(msg.meta.)
       if (!state || !state.date) {
         state.date = attachments.ts
         state.nick = msg.body.event.user

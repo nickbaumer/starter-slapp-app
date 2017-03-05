@@ -1,4 +1,4 @@
-module.exports = function(msg, cbk) {
+module.exports = function(msg, function(cbk)) {
 
 var request = require('request')
 var user_name = ''

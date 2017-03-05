@@ -25,6 +25,9 @@ module.exports = function(slapp) {
       } else {
         var strQuote = attachments.author_subname + ': ' + attachments.text + '/n'
         state.quote = state.quote + strQuote
+        return msg
+        .say('Are there more lines?')
+        .route('more-lines', state)
       }
     } else if (text == 'yes') {
       return msg

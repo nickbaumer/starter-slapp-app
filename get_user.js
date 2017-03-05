@@ -1,7 +1,7 @@
 module.exports = function(msg) {
 
 var request = require('request')
-
+var user_name = ''
 // Set the headers
 var headers = {
     'User-Agent':       'Super Agent/0.0.1',
@@ -21,7 +21,7 @@ request(options, function (error, response, body) {
     //if (!error && response.statusCode == 200) {
         // Print out the response body
         var result = JSON.parse(body)
-        var user_name = result.user.name
+        user_name = result.user.name
     //}
 })
 

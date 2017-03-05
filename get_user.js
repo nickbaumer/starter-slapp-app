@@ -17,19 +17,16 @@ var options = {
 }
 
 // Start the request
-callback = function(response) {
-  user_name = response;
-}
 
- request(options, function (error, response, body), callback {
-    //if (!error && response.statusCode == 200) {
+function callback(error, response, body) {
+    if (!error && response.statusCode == 200) {
         // Print out the response body
         var result = JSON.parse(body);
         user_name = result.user.name;
-        return callback(user_name)
-    //}
+        return user_name;
+    }
 });
 
-return user_name;
+user_name = request(options, callback);
 
 };

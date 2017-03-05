@@ -27,6 +27,8 @@ function callback(error, response, body) {
     }
 };
 console.log('outside callback:'+user_name)
+
+request(options, callback);
 return user_name;
 
 };

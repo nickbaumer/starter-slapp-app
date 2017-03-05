@@ -34,7 +34,7 @@ module.exports = function(slapp) {
     } else if (text == 'no') {
       return msg
       .say('Here is your quote')
-      .say(${JSON.stringify(state)})
+      .say(JSON.stringify(state))
     }
   })
 }

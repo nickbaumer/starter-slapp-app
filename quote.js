@@ -36,5 +36,5 @@ module.exports = function(slapp) {
       .say('Here is your quote')
       .say(state.quote)
     }
-  }
+  })
 }

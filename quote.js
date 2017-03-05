@@ -4,7 +4,7 @@ module.exports = function(slapp) {
 //    var type = msg.body.event.attachments.text
     console.log('Attempting to log attachments')
     var attachments = JSON.parse(msg.body.event.attachments)
-    console.log(attachments)
+    console.log(attachments.text)
     })
 
 }

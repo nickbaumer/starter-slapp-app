@@ -33,7 +33,8 @@ module.exports = function(slapp) {
       console.log('text:' + attachments.text)
       console.log('author_subname:' + attachments.author_subname)
       console.log('ts:' + attachments.ts)
-      if (!state.date) {
+      console.log(msg.meta.bot_token)
+      if (!state || !state.date) {
         state.date = attachments.ts
         state.nick = msg.body.event.user
       }

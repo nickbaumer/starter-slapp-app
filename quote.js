@@ -1,6 +1,6 @@
 module.exports = function(slapp) {
 
-  slapp.message('^$', ['direct_message'], (msg) => {
+  slapp.message('^$', ['direct_message'], (msg, state) => {
     require('./test_request')(msg)
     console.log('Checking for attachments')
     var attachments = msg.body.event.attachments[0]

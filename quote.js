@@ -16,10 +16,16 @@ module.exports = function(slapp) {
   .route('more-lines', (msg, state) => {
     var text = (msg.body.event && msg.body.event.text) || ''
     if (!text) {
-      return msg
-      .say('I didn\'t catch that.')
-      .say('Are there more lines?')
-      .route('more-lines', state)
+      var attachments = msg.body.event.attachments[0]
+      if (!attachments) {
+        return msg
+        .say('I didn\'t catch that.')
+        .say('Are there more lines?')
+        .route('more-lines', state)
+      } else {
+        var strQuote = attachments.author_subname + ': ' + attachments.text + '/n'
+        state.quote = state.quote + strQuote
+      }
     } else if (text == 'yes') {
       return msg
       .say('Please share the next line.')

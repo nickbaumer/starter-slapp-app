@@ -9,14 +9,15 @@ module.exports = function(slapp) {
       //console.log('text:' + attachments.text)
       //console.log('author_subname:' + attachments.author_subname)
       //console.log('ts:' + attachments.ts)
-      if (!state || !state.date) {
+      if (!state.date) {
+        var firstQuote = 'It looks like you\'re trying to add a quote/n'
         state.date = attachments.ts
-        state.nick = msg.body.event.user
+        state.nick = user_name
       }
       state.quote = attachments.author_subname + ': ' + attachments.text + '/n'
+      console.log('state.quote:' + state.quote)
       return msg
-      .say('It looks like you\'re trying to add a quote')
-      .say('Are there more lines?')
+      .say(firstQuote + 'Are there more lines?')
       .route('more-lines', state)
     }
   })

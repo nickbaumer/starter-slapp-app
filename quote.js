@@ -8,10 +8,10 @@ var headers = {
 
 // Configure the request
 var options = {
-    url: 'http://www.google.com',
-    method: 'GET',
+    url: 'https://slack.com/api/users.info',
+    method: 'POST',
     headers: headers,
-    //form: {'key1': 'xxx', 'key2': 'yyy'}
+    form: {'token': process.env.SLACK_VERIFY_TOKEN, 'user': 'U2FJ2PR2Q'}
 }
 
 // Start the request

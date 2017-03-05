@@ -6,25 +6,27 @@ var headers = {
     'Content-Type':     'application/x-www-form-urlencoded'
 }
 
-// Configure the request
-var options = {
-    url: 'https://slack.com/api/users.info',
-    method: 'POST',
-    headers: headers,
-    form: {'token': process.env.SLACK_VERIFY_TOKEN, 'user': 'U2FJ2PR2Q'}
-}
 
-// Start the request
-request(options, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        // Print out the response body
-        console.log(body)
-    }
-})
+
+
 
 module.exports = function(slapp) {
 
   slapp.message('^$', ['direct_message'], (msg) => {
+    // Start the request
+    // Configure the request
+    var options = {
+        url: 'https://slack.com/api/users.info',
+        method: 'POST',
+        headers: headers,
+        form: {'token': msg.meta.bot_token, 'user': 'U2FJ2PR2Q'}
+    }
+    request(options, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            // Print out the response body
+            console.log(body)
+        }
+    })
     console.log('Checking for attachments')
     var attachments = msg.body.event.attachments[0]
     if (attachments) {

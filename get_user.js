@@ -1,4 +1,4 @@
-module.exports = function(msg, function(cbk)) {
+module.exports = function(msg) {
 
 var request = require('request')
 var user_name = ''
@@ -23,12 +23,10 @@ function callback(error, response, body) {
         // Print out the response body
         var result = JSON.parse(body);
         user_name = result.user.name;
-        cbk(user_name);
+        exports.user_name = user_name;
     }
 };
 
 request(options, callback);
-
-
 
 };

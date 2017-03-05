@@ -1,7 +1,8 @@
 module.exports = function(slapp) {
 
   slapp.message('^$', ['direct_message'], (msg) => {
-    var user_name = require('./get_user')(msg)
+    var get_un = require('./get_user')(msg)
+    var user_name = get_un.user_name
     console.log(user_name)
     //console.log('User identified as:' + user_name)
     //console.log('Checking for attachments')

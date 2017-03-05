@@ -25,7 +25,7 @@ function callback(error, response, body) {
         user_name = result.user.name;
         return user_name;
     }
-});
+};
 
 user_name = request(options, callback);
 

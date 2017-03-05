@@ -1,4 +1,4 @@
-module.exports = function(msg, myCallback) {
+exports.name = function(msg) {
 
 var request = require('request')
 
@@ -23,12 +23,9 @@ function callback(error, response, body) {
         // Print out the response body
         var result = JSON.parse(body);
         var user_name = result.user.name;
-        return user_name;
     }
 };
 
-  request(options, callback) {
-    myCallback(null, callback)
-  }
+return user_name;
 
 };

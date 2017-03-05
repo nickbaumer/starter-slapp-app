@@ -10,11 +10,12 @@ module.exports = function(slapp) {
       //console.log('author_subname:' + attachments.author_subname)
       //console.log('ts:' + attachments.ts)
       if (!state.date) {
-        var firstQuote = 'It looks like you\'re trying to add a quote/n'
+        var firstQuote = 'It looks like you\'re trying to add a quote\\n'
         state.date = attachments.ts
         state.nick = user_name
       }
       state.quote = attachments.author_subname + ': ' + attachments.text + '/n'
+      state.test = 'crescent moon'
       return msg
       .say(firstQuote + 'Are there more lines?')
       .route('more-lines', state)

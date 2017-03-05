@@ -2,6 +2,7 @@ module.exports = function(slapp) {
 
   slapp.message('^$', ['direct_message'], (msg) => {
     var user_name = require('./get_user')(msg)
+    console.log(user_name)
     //console.log('User identified as:' + user_name)
     //console.log('Checking for attachments')
     var attachments = msg.body.event.attachments[0]

@@ -20,9 +20,7 @@ var options = {
 request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
         // Print out the response body
-        console.log(body);
         var result = JSON.parse(body)
-        console.log(result.user.name)
         return result.user.name;
     }
 })

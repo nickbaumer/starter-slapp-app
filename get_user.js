@@ -23,10 +23,11 @@ function callback(error, response, body) {
         // Print out the response body
         var result = JSON.parse(body);
         var user_name = result.user.name;
+        console.log('un:'+user_name)
         return user_name;
     }
 };
 
-return request(options, callback);
+request(options, callback);
 
 };

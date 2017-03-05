@@ -32,9 +32,10 @@ module.exports = function(slapp) {
       .say('Please share the next line.')
       .route('more-lines', state)
     } else if (text == 'no') {
+      var parseState = JSON.parse(state)
       return msg
       .say('Here is your quote')
-      .say(JSON.stringify(state))
+      .say(parseState.quote)
     }
   })
 }

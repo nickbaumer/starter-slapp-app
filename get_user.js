@@ -1,4 +1,4 @@
-module.exports = function(msg) {
+module.exports = function(msg, callback) {
 
 var request = require('request')
 var user_name = ''
@@ -17,12 +17,12 @@ var options = {
 }
 
 // Start the request
-user_name = request(options, function (error, response, body, callback) {
+ request(options, function (error, response, body) {
     //if (!error && response.statusCode == 200) {
         // Print out the response body
         var result = JSON.parse(body);
         user_name = result.user.name;
-        callback(user_name);
+        return callback(user_name)
     //}
 });
 

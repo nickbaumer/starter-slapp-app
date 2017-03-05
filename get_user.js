@@ -28,8 +28,6 @@ function callback(error, response, body) {
     }
 };
 
-
 request(options, callback);
-return user_name;
 
 };

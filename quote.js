@@ -6,5 +6,5 @@ module.exports = function(slapp) {
     console.log('text:' + attachments.text)
     console.log('author_name:' + attachments.author_name)
     console.log('ts:' + attachments.ts)
-  }
+  })
 }

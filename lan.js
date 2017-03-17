@@ -7,6 +7,7 @@ module.exports = function(slapp) {
       msg
         .say([
         'LAN starts at 18:00 on Thursday the 13th of April 2017.',
+        'You love it really.',
         'la la la la I\'m not listening',
         '6pm. Thursday. 13/04.',
         'Ask @vyper',
@@ -23,7 +24,11 @@ module.exports = function(slapp) {
             'Douchebag.',
             'Dickhole.',
             'Tool.',
-            'Ass bandit.'
+            'Ass bandit.',
+            'Wow. What a bellend.',
+            'Get bent.',
+            'Chong.',
+            'Really?'
           ])
     }
   })

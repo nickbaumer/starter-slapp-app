@@ -20,20 +20,20 @@ module.exports = function(slapp) {
           var subtitle = result.subtitle
           console.log('message:' + myMessage)
           console.log('subtitle:' + subtitle)
-          var regex = '.*'
-          var location = 'ambient'
-          slapp.message(regex,location, (msg) => {
-            var channel = msg.body.event.channel
-            if (channel == 'C2FJ690F') {
-              msg.say(myMessage)
-            }
-          })
       }
   }
 
 
-
-  request(options, callback)
+  var regex = '.*'
+  var location = 'ambient'
+  slapp.message(regex,location, (msg) => {
+    var channel = msg.body.event.channel
+    console.log('channel:' + channel)
+    if (channel == 'C2FJ690F') {
+      console.log('channel filtered works')
+    //  msg.say(myMessage)
+    }
+  //request(options, callback)
 
 // attempt to re-build
 }

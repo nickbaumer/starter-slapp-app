@@ -29,4 +29,4 @@ var insults = {
   }
 }
 
-module.exports = insults
+module.exports = insults(slapp)

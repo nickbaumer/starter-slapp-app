@@ -32,10 +32,10 @@ module.exports = function(slapp) {
   slapp.message(regex,location, (msg) => {
     var channel = msg.body.event.channel
     console.log('channel:' + channel)
-    if (channel == 'C2FJ690FJ') {
-      console.log('inside if!')
+  //  if (channel == 'C2FJ690FJ') {
+    //  console.log('inside if!')
       //request(options, callback(msg))
-    }
+  //  }
   })
 
 

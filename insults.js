@@ -1,6 +1,7 @@
+var request = require('request')
+
 var insults = {
 
-  var request = require('request')
   var url = 'https://www.foaas.com/thanks/nick'
   var options = {
     url: url,

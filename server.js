@@ -18,6 +18,7 @@ var slapp = Slapp({
 //require('./tutorial')(slapp);
 require('./lan')(slapp);
 require('./quote')(slapp);
+require('./insults')(slapp);
 
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())

@@ -21,7 +21,6 @@ module.exports = function(slapp) {
           var subtitle = result.subtitle
           console.log('message:' + message)
           console.log('subtitle:' + subtitle)
-          return message
       }
   }
 
@@ -30,8 +29,7 @@ module.exports = function(slapp) {
 
   slapp.
     message(regex,location, (msg) => {
-      var myResponse = request(options, callback)
-      msg.say(myResponse)
+      request(options, callback)
     })
 // attempt to re-build
 }

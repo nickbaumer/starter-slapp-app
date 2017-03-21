@@ -17,19 +17,21 @@ module.exports = function(slapp) {
       if (!error && response.statusCode == 200) {
           // Print out the response body
           var result = JSON.parse(body)
-          var message = result.message
+          var myMessage = result.message
           var subtitle = result.subtitle
           console.log('message:' + message)
           console.log('subtitle:' + subtitle)
+          slapp.
+            message(regex,location, (msg) => {
+              msg.say(myMessage)
+            })
       }
   }
 
   var regex = '.*'
   var location = 'ambient'
 
-  slapp.
-    message(regex,location, (msg) => {
-      request(options, callback)
-    })
+  request(options, callback)
+
 // attempt to re-build
 }

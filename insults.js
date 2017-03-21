@@ -3,14 +3,12 @@ module.exports = function(slapp) {
   var url = 'https://www.foaas.com/thanks/nick'
 
   var headers = {
-      'User-Agent':       'Super Agent/0.0.1',
-      'Content-Type':     'application/x-www-form-urlencoded'
+      'Accept':     'application/json'
   }
 
   var options = {
     url: url,
-    method: 'POST',
-    form: {'Accept':'application/json'}
+    method: 'GET',
   }
 
   function callback(error, response, body) {

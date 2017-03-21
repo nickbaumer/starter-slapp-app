@@ -20,6 +20,9 @@ module.exports = function(slapp) {
           var subtitle = result.subtitle
           console.log('message:' + myMessage)
           console.log('subtitle:' + subtitle)
+          msg.say(
+            'message:' + myMessage
+          )
       }
   }
 
@@ -29,12 +32,11 @@ module.exports = function(slapp) {
   slapp.message(regex,location, (msg) => {
     var channel = msg.body.event.channel
     console.log('channel:' + channel)
-    if (channel == 'C2FJ690F') {
-      console.log('channel filtered works')
-    //  msg.say(myMessage)
+    if (channel == 'C2FJ690FJ') {
+      request(options, callback(msg))
     }
   })
-  //request(options, callback)
+
 
 // attempt to re-build
 }

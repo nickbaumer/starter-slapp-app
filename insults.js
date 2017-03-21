@@ -21,12 +21,11 @@ var insults = {
     var regex = '.*'
     var location = 'ambient'
 
-    function(slapp) {
-      slapp.
-        message(regex,location, (msg) => {
-          request(options, callback)
-        }
-    }
+    slapp.
+      message(regex,location, (msg) => {
+        request(options, callback)
+      }
+
   }
 }
 

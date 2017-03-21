@@ -19,12 +19,9 @@ module.exports = function(slapp) {
           var result = JSON.parse(body)
           var myMessage = result.message
           var subtitle = result.subtitle
-          console.log('message:' + message)
+          console.log('message:' + myMessage)
           console.log('subtitle:' + subtitle)
-          slapp.
-            message(regex,location, (msg) => {
-              msg.say(myMessage)
-            })
+
       }
   }
 
@@ -35,3 +32,7 @@ module.exports = function(slapp) {
 
 // attempt to re-build
 }
+/*      slapp.
+        message(regex,location, (msg) => {
+          msg.say(myMessage)
+        })

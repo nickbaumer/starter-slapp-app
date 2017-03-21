@@ -1,9 +1,15 @@
 module.exports = function(slapp) {
   var request = require('request')
   var url = 'https://www.foaas.com/thanks/nick'
+
+  var headers = {
+      'User-Agent':       'Super Agent/0.0.1',
+      'Content-Type':     'application/x-www-form-urlencoded'
+  }
+
   var options = {
     url: url,
-    method: 'POST'
+    method: 'POST',
     form: {'Accept':'application/json'}
   }
 

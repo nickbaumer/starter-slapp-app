@@ -20,12 +20,15 @@ module.exports = function(slapp) {
           var subtitle = result.subtitle
           console.log('message:' + myMessage)
           console.log('subtitle:' + subtitle)
-
+          var regex = '.*'
+          var location = 'ambient'
+          slapp.message(regex,location, (msg) => {
+            msg.say(myMessage)
+          })
       }
   }
 
-  var regex = '.*'
-  var location = 'ambient'
+
 
   request(options, callback)
 

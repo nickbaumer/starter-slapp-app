@@ -24,7 +24,7 @@ module.exports = function(slapp) {
           var location = 'ambient'
           slapp.message(regex,location, (msg) => {
             var channel = msg.body.event.channel
-            if channel == 'C2FJ690F' {
+            if (channel == 'C2FJ690F') {
               msg.say(myMessage)
             }
           })

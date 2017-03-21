@@ -33,6 +33,7 @@ module.exports = function(slapp) {
       console.log('channel filtered works')
     //  msg.say(myMessage)
     }
+  })
   //request(options, callback)
 
 // attempt to re-build

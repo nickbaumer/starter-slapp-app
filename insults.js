@@ -32,7 +32,3 @@ module.exports = function(slapp) {
 
 // attempt to re-build
 }
-/*      slapp.
-        message(regex,location, (msg) => {
-          msg.say(myMessage)
-        })

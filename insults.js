@@ -30,9 +30,8 @@ module.exports = function(slapp) {
 
   slapp.
     message(regex,location, (msg) => {
-      msg.say(
-        request(options, callback)
-      )
+      var myResponse = request(options, callback)
+      msg.say(myResponse)
     })
 // attempt to re-build
 }

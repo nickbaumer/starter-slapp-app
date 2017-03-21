@@ -24,7 +24,7 @@ var insults = {
     slapp.
       message(regex,location, (msg) => {
         request(options, callback)
-      }
+      })
 
   }
 }

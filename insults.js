@@ -9,6 +9,7 @@ module.exports = function(slapp) {
   var options = {
     url: url,
     method: 'GET',
+    headers: headers
   }
 
   function callback(error, response, body) {

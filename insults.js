@@ -3,7 +3,8 @@ module.exports = function(slapp) {
   var url = 'https://www.foaas.com/thanks/nick'
   var options = {
     url: url,
-    method: 'GET'
+    method: 'POST'
+    form: {'Accept':'application/json'}
   }
 
   function callback(error, response, body) {
